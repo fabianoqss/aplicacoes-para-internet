@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engenharia de Interface — Disciplinas do Semestre</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- ITCSS order: settings → tools → generic → base → layout → components → utilities -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components/navbar.css" />
+  <link rel="stylesheet" href="css/components/card.css" />
+  <link rel="stylesheet" href="css/components/footer.css" />
+  <link rel="stylesheet" href="css/components/btn.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a href="#" class="navbar__brand">
+        <div class="navbar__brand-icon" aria-hidden="true">EI</div>
+        Eng. Interface
+      </a>
+
+      <button
+        class="navbar__hamburger"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+
+      <ul class="navbar__menu" id="nav-menu" role="list">
+        <li><a href="#disciplinas" class="navbar__link navbar__link--active">Disciplinas</a></li>
+        <li><a href="#sobre"       class="navbar__link">Sobre</a></li>
+        <li><a href="#contato"     class="navbar__link">Contato</a></li>
+        <li>
+          <a href="#" class="btn btn--primary" style="margin-left:.5rem;">
+            Acessar Portal
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main">
+    <section class="section container" id="disciplinas">
+      <h2 class="section__title">Disciplinas do Semestre</h2>
+
+      <div class="cards-grid">
+
+        <!-- Card 1 — Featured -->
+        <article class="card card--featured">
+          <div class="card__header">
+            <span class="card__icon" aria-hidden="true">🖥️</span>
+            <span class="card__badge">Destaque</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Engenharia de Interface</h3>
+            <p class="card__description">
+              Fundamentos de HTML5, CSS3 e JavaScript para construção de interfaces
+              modernas, responsivas e acessíveis seguindo boas práticas de mercado.
+            </p>
+            <ul class="card__meta">
+              <li><span class="card__tag">HTML5</span></li>
+              <li><span class="card__tag">CSS3</span></li>
+              <li><span class="card__tag">JavaScript</span></li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <span class="card__footer-info">Prof. Jeofton Costa</span>
+            <div class="card__progress" aria-label="Progresso 70%">
+              <div class="card__progress-bar">
+                <div class="card__progress-fill" style="width:70%"></div>
+              </div>
+              <span>70%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon" aria-hidden="true">⚙️</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Algoritmos e Estruturas de Dados</h3>
+            <p class="card__description">
+              Estudo de algoritmos clássicos de ordenação, busca e estruturas de dados
+              como listas, filas, pilhas e árvores com implementações em C e Python.
+            </p>
+            <ul class="card__meta">
+              <li><span class="card__tag">C</span></li>
+              <li><span class="card__tag">Python</span></li>
+              <li><span class="card__tag">Lógica</span></li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <span class="card__footer-info">Prof. Ana Souza</span>
+            <div class="card__progress" aria-label="Progresso 55%">
+              <div class="card__progress-bar">
+                <div class="card__progress-fill" style="width:55%"></div>
+              </div>
+              <span>55%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon" aria-hidden="true">🗄️</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Banco de Dados Relacional</h3>
+            <p class="card__description">
+              Modelagem entidade-relacionamento, normalização, SQL avançado e
+              administração básica de SGBDs como PostgreSQL e MySQL.
+            </p>
+            <ul class="card__meta">
+              <li><span class="card__tag">SQL</span></li>
+              <li><span class="card__tag">PostgreSQL</span></li>
+              <li><span class="card__tag">Modelagem</span></li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <span class="card__footer-info">Prof. Carlos Lima</span>
+            <div class="card__progress" aria-label="Progresso 45%">
+              <div class="card__progress-bar">
+                <div class="card__progress-fill" style="width:45%"></div>
+              </div>
+              <span>45%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon" aria-hidden="true">📡</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Redes de Computadores</h3>
+            <p class="card__description">
+              Modelo OSI, protocolos TCP/IP, endereçamento IPv4/IPv6, roteamento e
+              conceitos de segurança em redes corporativas.
+            </p>
+            <ul class="card__meta">
+              <li><span class="card__tag">TCP/IP</span></li>
+              <li><span class="card__tag">IPv6</span></li>
+              <li><span class="card__tag">Segurança</span></li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <span class="card__footer-info">Prof. Marina Reis</span>
+            <div class="card__progress" aria-label="Progresso 60%">
+              <div class="card__progress-bar">
+                <div class="card__progress-fill" style="width:60%"></div>
+              </div>
+              <span>60%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon" aria-hidden="true">📐</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Engenharia de Software</h3>
+            <p class="card__description">
+              Metodologias ágeis (Scrum, Kanban), requisitos de software, UML, padrões
+              de projeto e ciclo de vida de desenvolvimento.
+            </p>
+            <ul class="card__meta">
+              <li><span class="card__tag">Scrum</span></li>
+              <li><span class="card__tag">UML</span></li>
+              <li><span class="card__tag">Design Patterns</span></li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <span class="card__footer-info">Prof. Roberto Neves</span>
+            <div class="card__progress" aria-label="Progresso 40%">
+              <div class="card__progress-bar">
+                <div class="card__progress-fill" style="width:40%"></div>
+              </div>
+              <span>40%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon" aria-hidden="true">🤖</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Inteligência Artificial</h3>
+            <p class="card__description">
+              Introdução ao aprendizado de máquina, redes neurais, processamento de
+              linguagem natural e aplicações práticas com Python e bibliotecas como
+              scikit-learn.
+            </p>
+            <ul class="card__meta">
+              <li><span class="card__tag">ML</span></li>
+              <li><span class="card__tag">Python</span></li>
+              <li><span class="card__tag">NLP</span></li>
+            </ul>
+          </div>
+          <div class="card__footer">
+            <span class="card__footer-info">Prof. Fernanda Dias</span>
+            <div class="card__progress" aria-label="Progresso 30%">
+              <div class="card__progress-bar">
+                <div class="card__progress-fill" style="width:30%"></div>
+              </div>
+              <span>30%</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.cards-grid -->
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contato">
+    <div class="footer__grid">
+
+      <!-- Coluna 1 — Marca -->
+      <div>
+        <div class="footer__brand">
+          <div class="footer__brand-icon" aria-hidden="true">EI</div>
+          Eng. Interface
+        </div>
+        <p class="footer__tagline">
+          Formando profissionais capacitados para criar experiências digitais
+          modernas, acessíveis e de alta qualidade.
+        </p>
+      </div>
+
+      <!-- Coluna 2 — Disciplinas -->
+      <div>
+        <h3 class="footer__column-title">Disciplinas</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="#" class="footer__link">Engenharia de Interface</a></li>
+          <li><a href="#" class="footer__link">Algoritmos e ED</a></li>
+          <li><a href="#" class="footer__link">Banco de Dados</a></li>
+          <li><a href="#" class="footer__link">Redes de Computadores</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3 — Recursos -->
+      <div>
+        <h3 class="footer__column-title">Recursos</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="#" class="footer__link">Portal do Aluno</a></li>
+          <li><a href="#" class="footer__link">Biblioteca Digital</a></li>
+          <li><a href="#" class="footer__link">Calendário Acadêmico</a></li>
+          <li><a href="#" class="footer__link">Suporte TI</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4 — Contato -->
+      <div>
+        <h3 class="footer__column-title">Contato</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="mailto:ei@faculdade.edu.br" class="footer__link">ei@faculdade.edu.br</a></li>
+          <li><a href="tel:+5511999999999"         class="footer__link">(11) 99999-9999</a></li>
+          <li><a href="#"                           class="footer__link">Av. Universitária, 1000</a></li>
+          <li><a href="#"                           class="footer__link">São Paulo — SP</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer__grid -->
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; <span id="copyright-year"></span> Engenharia de Interface. Todos os direitos reservados.
+      </p>
+      <nav class="footer__legal" aria-label="Links legais">
+        <a href="#" class="footer__legal-link">Política de Privacidade</a>
+        <a href="#" class="footer__legal-link">Termos de Uso</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

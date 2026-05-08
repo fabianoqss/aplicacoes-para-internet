@@ -1,0 +1,75 @@
+/* Button base */
+.btn {
+  --btn-bg:     transparent;
+  --btn-color:  var(--color-neutral-800);
+  --btn-border: transparent;
+  --btn-hover-bg:     transparent;
+  --btn-hover-color:  var(--color-neutral-900);
+  --btn-hover-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  border: 2px solid var(--btn-border);
+  border-radius: var(--radius-md);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast),
+              box-shadow var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-color);
+  border-color: var(--btn-hover-border);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary-400);
+  outline-offset: 3px;
+}
+
+/* Variants */
+.btn--primary {
+  --btn-bg:           var(--color-primary-500);
+  --btn-color:        #fff;
+  --btn-border:       var(--color-primary-500);
+  --btn-hover-bg:     var(--color-primary-600);
+  --btn-hover-color:  #fff;
+  --btn-hover-border: var(--color-primary-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--outline {
+  --btn-bg:           transparent;
+  --btn-color:        var(--color-primary-500);
+  --btn-border:       var(--color-primary-500);
+  --btn-hover-bg:     var(--color-primary-100);
+  --btn-hover-color:  var(--color-primary-600);
+  --btn-hover-border: var(--color-primary-500);
+}
+
+.btn--ghost {
+  --btn-bg:           transparent;
+  --btn-color:        var(--color-neutral-700);
+  --btn-border:       transparent;
+  --btn-hover-bg:     var(--color-neutral-100);
+  --btn-hover-color:  var(--color-neutral-900);
+  --btn-hover-border: transparent;
+}
