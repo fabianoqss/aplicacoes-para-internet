@@ -36,7 +36,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
-  color: #fff;
+  color: var(--color-text-inverted);
 }
 
 .footer__brand-icon {
@@ -62,7 +62,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: var(--font-bold);
-  color: #fff;
+  color: var(--color-text-inverted);
   text-transform: uppercase;
   letter-spacing: .08em;
   margin-bottom: var(--space-4);
@@ -81,11 +81,11 @@
 }
 
 .footer__link:hover {
-  color: #fff;
+  color: var(--color-text-inverted);
 }
 
 .footer__bottom {
-  border-top: 1px solid var(--color-neutral-800);
+  border-top: var(--border-width) solid var(--color-border-dark);
   padding-block: var(--space-6);
   max-width: var(--container-max);
   margin-inline: auto;
@@ -120,5 +120,5 @@
 }
 
 .footer__legal-link:hover {
-  color: #fff;
+  color: var(--color-text-inverted);
 }

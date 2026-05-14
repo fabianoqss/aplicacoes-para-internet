@@ -41,28 +41,28 @@
 }
 
 .btn:focus-visible {
-  outline: 3px solid var(--color-primary-400);
+  outline: 3px solid var(--color-action-focus);
   outline-offset: 3px;
 }
 
 /* Variants */
 .btn--primary {
-  --btn-bg:           var(--color-primary-500);
-  --btn-color:        #fff;
-  --btn-border:       var(--color-primary-500);
-  --btn-hover-bg:     var(--color-primary-600);
-  --btn-hover-color:  #fff;
-  --btn-hover-border: var(--color-primary-600);
+  --btn-bg:           var(--color-action-primary);
+  --btn-color:        var(--color-text-inverted);
+  --btn-border:       var(--color-action-primary);
+  --btn-hover-bg:     var(--color-action-primary-hover);
+  --btn-hover-color:  var(--color-text-inverted);
+  --btn-hover-border: var(--color-action-primary-hover);
   box-shadow: var(--shadow-sm);
 }
 
 .btn--outline {
   --btn-bg:           transparent;
-  --btn-color:        var(--color-primary-500);
-  --btn-border:       var(--color-primary-500);
-  --btn-hover-bg:     var(--color-primary-100);
-  --btn-hover-color:  var(--color-primary-600);
-  --btn-hover-border: var(--color-primary-500);
+  --btn-color:        var(--color-action-primary);
+  --btn-border:       var(--color-action-primary);
+  --btn-hover-bg:     var(--color-action-primary-light);
+  --btn-hover-color:  var(--color-action-primary-hover);
+  --btn-hover-border: var(--color-action-primary);
 }
 
 .btn--ghost {

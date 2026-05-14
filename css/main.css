@@ -1,0 +1,43 @@
+/*
+ * Ponto de entrada único do CSS.
+ * @layer define precedência explícita: tokens < reset < base < components < utilities.
+ * Camadas com menor prioridade nunca sobrescrevem camadas com maior prioridade,
+ * independentemente da ordem de declaração no arquivo.
+ */
+@layer tokens, reset, base, layout, components, utilities;
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+@layer tokens {
+  @import "./tokens/primitives.css";
+  @import "./tokens/spacing.css";
+  @import "./tokens/typography.css";
+  @import "./tokens/semantic.css";
+}
+
+/* ── Reset ───────────────────────────────────────────────────────── */
+@layer reset {
+  @import "./reset.css";
+}
+
+/* ── Base ────────────────────────────────────────────────────────── */
+@layer base {
+  @import "./base.css";
+}
+
+/* ── Layout ──────────────────────────────────────────────────────── */
+@layer layout {
+  @import "./layout.css";
+}
+
+/* ── Componentes ─────────────────────────────────────────────────── */
+@layer components {
+  @import "./components/navbar.css";
+  @import "./components/card.css";
+  @import "./components/footer.css";
+  @import "./components/btn.css";
+}
+
+/* ── Utilitários ─────────────────────────────────────────────────── */
+@layer utilities {
+  @import "./utilities.css";
+}

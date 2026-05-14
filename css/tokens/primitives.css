@@ -1,0 +1,54 @@
+/*
+ * Tokens Primitivos — uso interno apenas.
+ * Prefixo _ sinaliza que não devem ser usados diretamente nos componentes.
+ * Referencie sempre os tokens semânticos de semantic.css.
+ */
+:root {
+  /* Blue palette */
+  --_blue-100: #dbeafe;
+  --_blue-200: #bfdbfe;
+  --_blue-300: #93c5fd;
+  --_blue-400: #60a5fa;
+  --_blue-500: #2E75B6;
+  --_blue-600: #1d4ed8;
+  --_blue-700: #1e40af;
+
+  /* Neutral palette */
+  --_neutral-50:  #f9fafb;
+  --_neutral-100: #f3f4f6;
+  --_neutral-200: #e5e7eb;
+  --_neutral-300: #d1d5db;
+  --_neutral-400: #9ca3af;
+  --_neutral-500: #6b7280;
+  --_neutral-600: #4b5563;
+  --_neutral-700: #374151;
+  --_neutral-800: #1f2937;
+  --_neutral-900: #111827;
+
+  /* Status */
+  --_green-600:  #16a34a;
+  --_amber-600:  #d97706;
+  --_red-600:    #dc2626;
+
+  /* Absolutes */
+  --_white: #ffffff;
+  --_black: #000000;
+
+  /* Border radius */
+  --_radius-sm:   0.25rem;
+  --_radius-md:   0.5rem;
+  --_radius-lg:   0.75rem;
+  --_radius-xl:   1rem;
+  --_radius-full: 9999px;
+
+  /* Shadows */
+  --_shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+  --_shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  --_shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+  --_shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+
+  /* Transitions */
+  --_transition-fast: 150ms ease;
+  --_transition-base: 250ms ease;
+  --_transition-slow: 400ms ease;
+}

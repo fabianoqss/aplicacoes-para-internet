@@ -1,4 +1,4 @@
-/* Hamburger menu toggle */
+/* ── Hamburger menu toggle ────────────────────────────────────────── */
 const hamburger = document.querySelector('.navbar__hamburger');
 const menu      = document.querySelector('.navbar__menu');
 
@@ -16,7 +16,6 @@ if (hamburger && menu) {
     }
   });
 
-  /* Close menu when a link is clicked on mobile */
   menu.querySelectorAll('.navbar__link').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('navbar__menu--open');
@@ -25,7 +24,7 @@ if (hamburger && menu) {
   });
 }
 
-/* Scroll: add .header--scrolled after 80px */
+/* ── Scroll: adiciona .header--scrolled após 80px ───────────────── */
 const header = document.querySelector('.header');
 
 if (header) {
@@ -35,7 +34,30 @@ if (header) {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-/* Dynamic copyright year */
+/* ── Dark Mode toggle ────────────────────────────────────────────── */
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon   = themeToggle?.querySelector('.navbar__theme-icon');
+const htmlEl      = document.documentElement;
+
+const applyTheme = (isDark) => {
+  htmlEl.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  if (themeIcon) themeIcon.textContent = isDark ? '☀️' : '🌙';
+  themeToggle?.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+};
+
+/* Restaura preferência salva ou usa preferência do sistema */
+const savedTheme  = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    applyTheme(htmlEl.getAttribute('data-theme') !== 'dark');
+  });
+}
+
+/* ── Ano de copyright dinâmico ───────────────────────────────────── */
 const yearEl = document.getElementById('copyright-year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();

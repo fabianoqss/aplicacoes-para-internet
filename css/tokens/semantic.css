@@ -1,0 +1,107 @@
+/*
+ * Tokens Semânticos — mapeiam primitivos para intenções de uso.
+ * Componentes devem referenciar APENAS estes tokens, nunca os primitivos.
+ * O Dark Mode é implementado aqui via [data-theme="dark"] sem duplicar CSS de componentes.
+ */
+
+:root {
+  /* ── Cores de ação / marca ───────────────────────────────────── */
+  --color-action-primary:       var(--_blue-500);
+  --color-action-primary-hover: var(--_blue-600);
+  --color-action-primary-light: var(--_blue-100);
+  --color-action-primary-dark:  var(--_blue-700);
+  --color-action-focus:         var(--_blue-400);
+
+  /* ── Cores de texto ──────────────────────────────────────────── */
+  --color-text-primary:   var(--_neutral-900);
+  --color-text-secondary: var(--_neutral-700);
+  --color-text-muted:     var(--_neutral-500);
+  --color-text-inverted:  var(--_white);
+
+  /* ── Cores de superfície / fundo ────────────────────────────── */
+  --color-surface:        var(--_neutral-50);
+  --color-surface-raised: var(--_white);
+  --color-surface-subtle: var(--_neutral-100);
+  --color-surface-dark:   var(--_neutral-900);   /* footer — permanece escuro */
+
+  /* ── Cores de borda ─────────────────────────────────────────── */
+  --color-border:      var(--_neutral-200);
+  --color-border-dark: var(--_neutral-800);
+
+  /* ── Status ──────────────────────────────────────────────────── */
+  --color-success: var(--_green-600);
+  --color-warning: var(--_amber-600);
+  --color-danger:  var(--_red-600);
+
+  /* ── Aliases de retrocompatibilidade (componentes existentes) ── */
+  --color-primary-100: var(--_blue-100);
+  --color-primary-200: var(--_blue-200);
+  --color-primary-300: var(--_blue-300);
+  --color-primary-400: var(--_blue-400);
+  --color-primary-500: var(--_blue-500);
+  --color-primary-600: var(--_blue-600);
+  --color-primary-700: var(--_blue-700);
+
+  --color-neutral-50:  var(--_neutral-50);
+  --color-neutral-100: var(--_neutral-100);
+  --color-neutral-200: var(--_neutral-200);
+  --color-neutral-300: var(--_neutral-300);
+  --color-neutral-400: var(--_neutral-400);
+  --color-neutral-500: var(--_neutral-500);
+  --color-neutral-600: var(--_neutral-600);
+  --color-neutral-700: var(--_neutral-700);
+  --color-neutral-800: var(--_neutral-800);
+  --color-neutral-900: var(--_neutral-900);
+
+  /* ── Borda ───────────────────────────────────────────────────── */
+  --border-width: 1px;
+  --border-color: var(--color-border);
+
+  /* ── Raios ───────────────────────────────────────────────────── */
+  --radius-sm:   var(--_radius-sm);
+  --radius-md:   var(--_radius-md);
+  --radius-lg:   var(--_radius-lg);
+  --radius-xl:   var(--_radius-xl);
+  --radius-full: var(--_radius-full);
+
+  /* ── Sombras ─────────────────────────────────────────────────── */
+  --shadow-sm: var(--_shadow-sm);
+  --shadow-md: var(--_shadow-md);
+  --shadow-lg: var(--_shadow-lg);
+  --shadow-xl: var(--_shadow-xl);
+
+  /* ── Transições ──────────────────────────────────────────────── */
+  --transition-fast: var(--_transition-fast);
+  --transition-base: var(--_transition-base);
+  --transition-slow: var(--_transition-slow);
+
+  /* ── Layout ──────────────────────────────────────────────────── */
+  --container-max: 1200px;
+  --navbar-height: 64px;
+}
+
+/* ── Dark Mode ───────────────────────────────────────────────────
+   Ativa com: <html data-theme="dark">
+   Nenhum componente precisa ser duplicado — só os tokens mudam.
+   ─────────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-surface:        var(--_neutral-900);
+  --color-surface-raised: var(--_neutral-800);
+  --color-surface-subtle: var(--_neutral-800);
+
+  --color-text-primary:   var(--_neutral-50);
+  --color-text-secondary: var(--_neutral-300);
+  --color-text-muted:     var(--_neutral-400);
+
+  --color-border:      var(--_neutral-700);
+  --color-border-dark: var(--_neutral-600);
+
+  /* aliases retrocompat ajustados para tema escuro */
+  --color-neutral-50:  var(--_neutral-900);
+  --color-neutral-100: var(--_neutral-800);
+  --color-neutral-200: var(--_neutral-700);
+  --color-neutral-300: var(--_neutral-600);
+  --color-neutral-700: var(--_neutral-300);
+  --color-neutral-800: var(--_neutral-200);
+  --color-neutral-900: var(--_neutral-50);
+}
